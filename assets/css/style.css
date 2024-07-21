@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap");
+
+:root {
+  --color-body: #e0e0e0;
+  --color-heading: #f5f5f5;
+  --color-base: #1c1c1c;
+  --color-base2: #121212;
+  --color-brand: #bb86fc;
+  --color-brand2: #3700b3;
+  --sidbar-width: 240px;
+  --font-base: "Kanit";
+}
+
+body {
+  background-color: var(--color-base2);
+  color: var(--color-body);
+  font-family: var(--font-base);
+}
+
+.card .img {
+  overflow: hidden;
+}
+
+.card .img img {
+  transition: all 0.5s ease;
+}
+
+.card:hover .img img {
+  transform: scale(1.1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-body);
+  transition: all 0.4s ease;
+}
+
+a:hover {
+  color: var(--color-brand);
+}
+
+img {
+  width: 100%;
+}
+
+.navbar .nav-link {
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  color: var(--color-body);
+}
+
+.navbar .nav-link:hover {
+  color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    min-height: 100vh !important;
+    max-width: var(--sidbar-width) !important;
+    background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.9)),
+      url("/assets/images/sidebar-img.jpg") !important;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navbar-brand img {
+    border: 5px solid var(--color-brand);
+  }
+
+  #content-wrapper {
+    margin-left: var(--sidbar-width);
+  }
+}
+
+.text-brand {
+  color: var(--color-brand);
+}
+
+.full-hight {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-base {
+  background-color: var(--color-base);
+}
+
+.shadow-effect {
+  transition: all 0.5s ease;
+}
+
+.shadow-effect:hover {
+  box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.navbar .nav-link.active {
+  color: var(--color-brand);
+}
+
+.iconbox {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background-color: var(--color-brand);
+  color: var(--color-base2);
+}
+
+/* BTN */
+.btn {
+  padding: 12px 28px;
+  font-weight: 700 !important;
+}
+
+.stars {
+  color: var(--color-brand2);
+}
+
+.btn-brand {
+  border: 2px solid var(--color-brand);
+  background-color: var(--color-brand);
+  color: var(--color-base2);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--color-brand2);
+  border: 2px solid var(--color-brand2);
+  color: var(--color-base);
+}
+
+.custom-link {
+  font-weight: 700;
+  position: relative;
+}
+
+.custom-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--color-brand);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.custom-link:hover::after {
+  width: 100%;
+}
+
+.navbar {
+  background-color: var(--color-base);
+}
+
+#contact .form-control {
+  background-color: var(--color-base);
+  color: var(--color-body);
+  border-color: var(--color-base);
+}
+
+#contact .form-control:focus {
+  border-color: var(--color-brand);
+  box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+  color: var(--color-body);
+}
+
+#contact input.form-control {
+  height: 42px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: var(--color-base);
+  color: white;
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  transition: color 0.4s ease, text-decoration 0.4s ease;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-brand);
+  text-decoration: underline;
+}
+
+.profilepic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid var(--color-base);
+  box-shadow: 0 0 20px var(--color-brand);
+}
+
+.circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: var(--main-color);
+  border-bottom-color: var(--second-bg-color);
+  animation: aboutSpinner 4s linear infinite;
+}
+
+.contact-links {
+  margin-left: 1rem;
+}
+
+.animated-text-1 {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.animated-text-1 span {
+  position: relative;
+}
+
+.animated-text-1 span::before {
+  content: "JAVA";
+  color: white;
+  animation: words1 20s infinite;
+}
+
+.animated-text-1 span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--color-base);
+  border-left: 2px solid white;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words1 {
+  0%,
+  20% {
+    content: "JAVA";
+  }
+  21%,
+  40% {
+    content: "DSA";
+  }
+  41%,
+  60% {
+    content: "PYTHON";
+  }
+  61%,
+  80% {
+    content: "JAVA";
+  }
+  81%,
+  100% {
+    content: "DSA";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+.animated-text-2 {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.animated-text-2 span {
+  position: relative;
+}
+
+.animated-text-2 span::before {
+  content: "JAVA";
+  color: white;
+  animation: words2 20s infinite;
+}
+
+.animated-text-2 span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--color-base);
+  border-left: 2px solid white;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words2 {
+  0%,
+  20% {
+    content: "WEB DEVELOPMENT";
+  }
+  21%,
+  40% {
+    content: "MERN";
+  }
+  41%,
+  60% {
+    content: "JAVASCRIPT";
+  }
+  61%,
+  80% {
+    content: "FRONTEND";
+  }
+  81%,
+  100% {
+    content: "BACKEND";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+.animated-text-3 {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.animated-text-3 span {
+  position: relative;
+}
+
+.animated-text-3 span::before {
+  content: "JAVA";
+  color: white;
+  animation: words3 20s infinite;
+}
+
+.animated-text-3 span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--color-base);
+  border-left: 2px solid white;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words3 {
+  0%,
+  20% {
+    content: "MACHINE LEARNING";
+  }
+  21%,
+  40% {
+    content: "PANDAS";
+  }
+  41%,
+  60% {
+    content: "NUMPY";
+  }
+  61%,
+  80% {
+    content: "MATPLOTLIB";
+  }
+  81%,
+  100% {
+    content: "SCIKIT-LEARN";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+@keyframes aboutSpinner {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .circle-spin {
+    display: none;
+  }
+}
+
+@media (max-width: 422px) {
+  .num {
+    padding-top: 2rem;
+    display: block;
+  }
+}
